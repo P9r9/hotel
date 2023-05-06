@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm    navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand justify-content-justify" href="#">THE RAJ <br>HOTEL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav p-1">
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#">ROOMS & SUITES </a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#">RESTAURANTS </a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#">CONTACT</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+     
+      <div class="main-container">
+        <div class="stars">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+        <div class="content">
+            <p>LUXURY HOTEL &  BEST RESORT</p>
+            <h1>ENJOY A LUXURY <br>EXPERIENCE</h1>
+            <button type="btn-1">ROOMS & SUITES</button>
+        </div>
+            
+        </div>
+
+        <div class="container">
+          <div class="flex">
+            <h6>check in</h6>
+          <input type="date">
+        </div>
+        <div class="flex">
+          <h6>check out</h6>
+        <input type="date">
+      </div>
+      <div class="flex">
+        <h6>Adults</h6>
+        <select name="cars" id="cars">
+          <option value="volvo">Adults-1</option>
+          <option value="saab">Adults-2</option>
+          <option value="opel">Adults-3</option>
+          <option value="audi">Adults-4</option>
+        </select>
+    </div>
+    <div class="flex">
+      <h6>Rooms</h6>
+      <select name="cars" id="cars">
+        <option value="volvo">Rooms-1</option>
+        <option value="saab">Rooms-2</option>
+        <option value="opel">Rooms-3</option>
+        <option value="audi">Rooms-4</option>
+      </select>
+  </div>
+  <div class="flex">
+   
+  <button type="button" class="btn-2">CHECK KNOW</button>
+</div>
+          
+        </div>
+
+      </div>
+
+      <div id="section-2">
+        <div class="second-container">
+          <div class="text">
+            <div class="stars2">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+        
+
+            </div>
+
+            <p>THE CAPPA LUXURY HOTEL</p>
+            <h1>Enjoy a Luxury  <br> Experience</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusantium sapiente quisquam quis aspernatur temporibus dolore cupiditate! Magni vitae similique maiores, repellat veniam perspiciatis modi iusto tenetur eius quos suscipit?</p>
+            <div class="call">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA4FJREFUWEftV0Fy00AQ7FmH4kh4Ac4LsKsi25yIo3DGeQHJCyAvwHkBzgtwXoBzJsLmFMtKVcwLCC/AHFM4GmplyV6tVlo54ZCi0MnalWbaPT2zLcIDu+iB4cG/DSjwWl2A34MxhcCMQwxuK3T2oj2+LlsJK0OB13zHDG7s+Se2oEtA+oOE0ZzosAywQkCTL60+Mb+R8Qnob7v+YRGoXEDLl7jruJPjohi5gFQwSYAyoC6GrerGHFUI7IC5BsJrFYCMURE3R/X2dGYCZgRkArMOKDVR8Lm1A8F9AM/KxMgA0sEw0WlUsrh0Zcungroa1jZvw8ddBt6u1unYccfdrNyUFSlgAB+SJQmmsTs+kPc6UFP5Ul0mhSzoRBXypdfsqaDmgrZ0oacYCrymbM+IWhVMAtAGyizqtJCD8+ZA0dXAcf19TWOr28BrcnLnuH4pfTHosOGOpUaQ32Wr8kSiD/l7kkdnKZX00mtOGXgeMSTCeqMdTPUaZwQfUtt5NR4lz8mEj27DGoikZqJY8lITazGOHNfvKYJXGWqMAHoZrWiJTDoylVX9A+ofJOBk2/WlRjHxWgcE/hg9yzhz9vyOEZCKXC1FJkiOxnQ2L88bHSb6FCeeOnt+Xf5OlY2xXJd7mqjjs8iQUO1AAr5tu35NB6Df63pRdZmn1xSgydCpUSiu4sAzx/WfJknkLJmHj3/miTEP3ELoi0udO3nrmU5Ktb4m7HTLmgebjTXbfuGk1kWbEiMwmwuqlznBbSDU/SxDi7NnmFcatXNAGDm7fju/XOWti7HLksXAW7W/zlIsVDmfnkTP53idda1LMSCNJX0m6WcegBnAvbkQp7KEd7UumbZXqdeCzjbEzZbqYWJQsoMWTCWXtK8E40go46dyDVqmNIzpRuWmrYKKjomQB+oRkcJ2B+tSbGHTcynXxkbdx9xR3eG61qVQQ6nSqeeO3DAwpQ3PyD+pB6a8t1mX0oBMwSIRh7SvnvJlZk3GjSrWZS1AESidqfhL5Leg47LD8a8CikAtNCW9T6qzZPeEJPqN3YuveUyZvHpijwsntY162VkVRlc1/co7MwIGYB6FonINmv+SJq8smMI5ZAO2+LwJu0tDZ3sh3reZOuuntC2PBEaCOwxI17f89jK9ZwNzL4ZMCRcaq3SYUCUOqwTajIfmDwA9fRSYYtybIRuD6+7/B2Rj7A8Hv0JDnpCoNwAAAABJRU5ErkJggg=="/>
+              <h4>Reservation <br> <span>9908064365</span> </h4>
+
+
+            </div>
+
+          </div>
+          <div class="side-images">
+            <img src="images/side-1.jpg" alt="side-1">
+            <img  class="image-2" src="images/main image.avif" alt="side-2">
+
+          </div>
+        </div>
+      </div>
+
+      <div id="section-3">
+        <div class="third-container">
+          <div class="small">
+          <p >THE  RAJ LUXURY HOTEL</p>
+     <h2 >Rooms & Suites</h2>
+    </div>
+
+     <div class="grid-container">
+
+      <div class="grid">
+   
+          
+        
+      <h6>BOOK</h6>
+       <div class="cost">
+        <p>150$ / NIGHT</p>
+        <h4>Junior Suite</h4>
+        
+       
+       <div class="icons">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+
+       </div>
+
+      </div>
+     
+      <p class="side">DEATILES -></p>
+      </div>
+    
+
+      
+      <div class="grid">
+        <h6>BOOK</h6>
+        <div class="cost">
+          <p>150$ / NIGHT</p>
+          <h4>Family Room</h4>
+          
+         
+         <div class="icons">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+  
+         </div>
+        </div>
+        
+        <p class="side">DEATILES -></p>
+      </div>
+
+      
+      <div class="grid">
+        <h6>BOOK</h6>
+        <div class="cost">
+          <p>150$ / NIGHT</p>
+          <h4>Double Room</h4>
+          
+         
+         <div class="icons">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+  
+         </div>
+        </div>
+        <p class="side">DEATILES -></p>
+      </div>
+
+      
+      <div class="grid">
+        <h6>BOOK</h6>
+        <div class="cost">
+          <p>150$ / NIGHT</p>
+          <h4>Deluxe Room</h4>
+          
+         
+         <div class="icons">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+  
+         </div>
+        </div>
+        <p class="side">DEATILES -></p>
+      </div>
+
+      
+      <div class="grid">
+        <h6>BOOK</h6>
+        <div class="cost">
+          <p>150$ / NIGHT</p>
+          <h4>Superior Room</h4>
+          
+         
+         <div class="icons">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+  
+         </div>
+        </div>
+        <p class="side">DEATILES -></p>
+      </div>
+
+
+
+      <div class="grid">
+        <h6>BOOK</h6>
+        <div class="cost">
+          <p>150$ / NIGHT</p>
+          <h4>Superior Room</h4>
+          
+         
+         <div class="icons">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAW1JREFUWEftmOFNwzAUhO8mgA2gEyAmgBFgAmAS6AZsAEwAI8AGMAHtBjDBoRc5lWvi2KUvJaBY6p/auny9e+/FKjGyxZHxYAIqJZJ1SNINAJkAyXlJqGa/RrMPqIEJQC7RSipq/k0gABafx1rpkOw0o8ohD5JU498B9XXZKYCT4MALgOceR69LjVIVWc5eEw+t3D5oTjJbbzvpsl8BKnSZRWYfWxZXX2Q/6zJJZwAeh+iuSPOc5NO37ku/kHQJ4G5gmFb+iuR9/Ky1opZ0COA9OrAMESycAE3f3N+L9GYkV/opkNFehMNvVhskP5xgGhlJ++FHHgXdB5KWSrNSICM9CHvHJF89YVqtpEYXJGc5oOLb2AswN5NShyagpm6iN//kUFTYneWRdcireGt0qiKrEXI680nSZlPnHLoFYEMqnqROz83KrF1Ztr4PbUK7k/vQBJQOrk0cSc9OkZXc28qhkvhQ+y5/InjCjQ7oC01N3CUMwKnwAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeJJREFUWEftVtFNwzAUvJsAOgFlAmACYALYADoBMAHtBMAElA1gAtoNugFsQJngoaucynGT2G6ClEp9Uj8qP/ud7734juhZsGd4sAcU60gWQ2Y2BHAF4BDAEsAHye9YkZz1JEBmJgBPAG4rDp8CeCApgK0jCsiB+QRw2lBtAeCyC1ApgN5dmwo8cwAzANcATjyQbySrGMxirRGQm5kv78QRSbVoFWYmAK/e+nHbmYoBunezo5oaYLFSCjNTuwqmNEvPWZQEyTFAYwCPbs+EpP6HgC4A6KeYkVQ7t47WgLauXLNxDyjGaL8ZMjMN7Z2Ththlulp/IamveRUlhszMuqqScc6S5KBPgEByTUwtQ35Sxm2TU/1u7CYgAIMu1LuKMucgftZz09AyPfvnLrEkpMm9SEgMRHlOspCeja/MF9MFybOE87NTzEwu88htLAlyONRyhko+cMlTkqPsig0bzEz25cal/AIY+qOx8VK7x7FQeO2TQdMtWnln561kg30Ls2FXKqUjuEVxXwGT99kmZH9DL1XpMGu1zMxktCQj/xElufALxMRV0y99K768tuDkx8dNJi5q8oUg0LhJJqr1PKa8/tmAUg71AddJRN2l9oBi7d5NhmK36nI9iaEuC8bO6h2gP8mr0yW1isNaAAAAAElFTkSuQmCC"/>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARRJREFUWEftl+ENgjAQRr9vA0dwA3UC3cCRlJGcQNgAJzpzpJKCLW0DSjXlZ2nL67vjLiUye5gZDwpQKCJeQyJyBSC6AcnqtVHquK4TkQ2AM4Ct2edGsnXBTQF1MAaonyciqeMKcwewtwBakoe1gNT0Zfxxkk4Z3zBUAzjmBNSH2IZa01AB6iIR8/eVkIXq1v8aCvWfqRpj59ZihnIB0ua3S4UB0JA8Wc14sTrk7EERgBVJXftWDmaFzNSWVEsPknZXH9Sn2UAGSk+rIXhrkNYHGgC1beYjhlzh8VXkiFB6q/nAXMxG9pwCFDJWDBVDIwPJN9eSQ7+YQ33jdLWKqQOZa3g3xbc2OYdCBue+L0Ahg9kZegIPukI0RR6iJAAAAABJRU5ErkJggg=="/>
+  
+         </div>
+        </div>
+        <p class="side">DEATILES -></p>
+      </div>
+
+
+
+
+
+
+     </div>
+
+
+
+        </div>
+      </div>
+      <div id="section-4">
+        <div class="fourth-conatiner">
+
+          <div class="grid-container-1">
+            <div class="grid-1">
+             
+              <p class="rod" >BEST PRICES</p>
+              <div class="color">
+              <h3>Extra Services</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat veniam dolores rerum earum eum ipsam voluptas. Eum, incidunt sunt. Velit possimus pariatur perferendis. Similique, consectetur impedit beatae unde minus provident?</p>
+            </div>
+              <div class="call">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA4FJREFUWEftV0Fy00AQ7FmH4kh4Ac4LsKsi25yIo3DGeQHJCyAvwHkBzgtwXoBzJsLmFMtKVcwLCC/AHFM4GmplyV6tVlo54ZCi0MnalWbaPT2zLcIDu+iB4cG/DSjwWl2A34MxhcCMQwxuK3T2oj2+LlsJK0OB13zHDG7s+Se2oEtA+oOE0ZzosAywQkCTL60+Mb+R8Qnob7v+YRGoXEDLl7jruJPjohi5gFQwSYAyoC6GrerGHFUI7IC5BsJrFYCMURE3R/X2dGYCZgRkArMOKDVR8Lm1A8F9AM/KxMgA0sEw0WlUsrh0Zcungroa1jZvw8ddBt6u1unYccfdrNyUFSlgAB+SJQmmsTs+kPc6UFP5Ul0mhSzoRBXypdfsqaDmgrZ0oacYCrymbM+IWhVMAtAGyizqtJCD8+ZA0dXAcf19TWOr28BrcnLnuH4pfTHosOGOpUaQ32Wr8kSiD/l7kkdnKZX00mtOGXgeMSTCeqMdTPUaZwQfUtt5NR4lz8mEj27DGoikZqJY8lITazGOHNfvKYJXGWqMAHoZrWiJTDoylVX9A+ofJOBk2/WlRjHxWgcE/hg9yzhz9vyOEZCKXC1FJkiOxnQ2L88bHSb6FCeeOnt+Xf5OlY2xXJd7mqjjs8iQUO1AAr5tu35NB6Df63pRdZmn1xSgydCpUSiu4sAzx/WfJknkLJmHj3/miTEP3ELoi0udO3nrmU5Ktb4m7HTLmgebjTXbfuGk1kWbEiMwmwuqlznBbSDU/SxDi7NnmFcatXNAGDm7fju/XOWti7HLksXAW7W/zlIsVDmfnkTP53idda1LMSCNJX0m6WcegBnAvbkQp7KEd7UumbZXqdeCzjbEzZbqYWJQsoMWTCWXtK8E40go46dyDVqmNIzpRuWmrYKKjomQB+oRkcJ2B+tSbGHTcynXxkbdx9xR3eG61qVQQ6nSqeeO3DAwpQ3PyD+pB6a8t1mX0oBMwSIRh7SvnvJlZk3GjSrWZS1AESidqfhL5Leg47LD8a8CikAtNCW9T6qzZPeEJPqN3YuveUyZvHpijwsntY162VkVRlc1/co7MwIGYB6FonINmv+SJq8smMI5ZAO2+LwJu0tDZ3sh3reZOuuntC2PBEaCOwxI17f89jK9ZwNzL4ZMCRcaq3SYUCUOqwTajIfmDwA9fRSYYtybIRuD6+7/B2Rj7A8Hv0JDnpCoNwAAAABJRU5ErkJggg=="/>
+                <h4>Reservation <br> <span>9908064365</span> </h4>
+  
+  
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="imagediv">
+                <img src="images/g-1.png" alt="">
+                <h4>Room Cleaning</h4>
+                <h3>$50 <span><h4>/Month</h4></span></h3>
+                <div class="downicon">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAYhJREFUWEftl1FOwkAQhmdMfIcT6BHwBOycRDyBmNB3fXV5gBNYTzLlBnoDjwDPEH+zRoy020K6XViNfe7OfPlndnZ+psQ+ToyHfieQ6rjHfP7k1AQwF5kWsZQ9SKHFIisAGm4hAJqL2HEMqL1AqpOcma/LyY2xe8+2AW4MqpqNmOmzVOUPWPdFZss2SZvO1AKpTgwzq/8wXo2ZDrqGcfG8QKrZgJkcTM+vDt2I2PwoQF83ysHUKbAC1pcxyuVVqHyjqr2DZ5HpKIY6FSDVbMZMt03JALoSsS9HASqKDLES1cTNgfXdz/LvNPUJgNzk32mBkwMR0dIY298qmALQyhj7PV5ODpRUyRwM0WYcvalDHt7OS8ZMi+HQmrbj4+8DhS5vnSsE8IPI430yJQPCVpMICkFCTEAEoLBtoHOgkBlU2Ye6eO2TAgodij6F3ojoou2VLT+UbeLs9FCTDzsg+AogE7reVmyQs0BEMERnXgvkB3tfEm3yLpxIFDt8gJq1v/wD7VMvOYU+ADW0ySVJ9lqUAAAAAElFTkSuQmCC"/>
+                  <p>Hotel is maintain good</p>
+                  
+                  
+                </div>
+                
+                <div class="downicon">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAYhJREFUWEftl1FOwkAQhmdMfIcT6BHwBOycRDyBmNB3fXV5gBNYTzLlBnoDjwDPEH+zRoy020K6XViNfe7OfPlndnZ+psQ+ToyHfieQ6rjHfP7k1AQwF5kWsZQ9SKHFIisAGm4hAJqL2HEMqL1AqpOcma/LyY2xe8+2AW4MqpqNmOmzVOUPWPdFZss2SZvO1AKpTgwzq/8wXo2ZDrqGcfG8QKrZgJkcTM+vDt2I2PwoQF83ysHUKbAC1pcxyuVVqHyjqr2DZ5HpKIY6FSDVbMZMt03JALoSsS9HASqKDLES1cTNgfXdz/LvNPUJgNzk32mBkwMR0dIY298qmALQyhj7PV5ODpRUyRwM0WYcvalDHt7OS8ZMi+HQmrbj4+8DhS5vnSsE8IPI430yJQPCVpMICkFCTEAEoLBtoHOgkBlU2Ye6eO2TAgodij6F3ojoou2VLT+UbeLs9FCTDzsg+AogE7reVmyQs0BEMERnXgvkB3tfEm3yLpxIFDt8gJq1v/wD7VMvOYU+ADW0ySVJ9lqUAAAAAElFTkSuQmCC"/>
+                  <p>Hotel is maintain good</p>
+                  
+                </div>
+               
+
+              </div>
+
+            </div>
+
+
+            <div class="grid-3">
+              <div class="imagediv">
+                <img src="images/side-2.jpg" alt="">
+                <h4>Drink Included</h4>
+                <h3>$30 <span><h4>/Month</h4></span></h3>
+                <div class="downicon">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAYhJREFUWEftl1FOwkAQhmdMfIcT6BHwBOycRDyBmNB3fXV5gBNYTzLlBnoDjwDPEH+zRoy020K6XViNfe7OfPlndnZ+psQ+ToyHfieQ6rjHfP7k1AQwF5kWsZQ9SKHFIisAGm4hAJqL2HEMqL1AqpOcma/LyY2xe8+2AW4MqpqNmOmzVOUPWPdFZss2SZvO1AKpTgwzq/8wXo2ZDrqGcfG8QKrZgJkcTM+vDt2I2PwoQF83ysHUKbAC1pcxyuVVqHyjqr2DZ5HpKIY6FSDVbMZMt03JALoSsS9HASqKDLES1cTNgfXdz/LvNPUJgNzk32mBkwMR0dIY298qmALQyhj7PV5ODpRUyRwM0WYcvalDHt7OS8ZMi+HQmrbj4+8DhS5vnSsE8IPI430yJQPCVpMICkFCTEAEoLBtoHOgkBlU2Ye6eO2TAgodij6F3ojoou2VLT+UbeLs9FCTDzsg+AogE7reVmyQs0BEMERnXgvkB3tfEm3yLpxIFDt8gJq1v/wD7VMvOYU+ADW0ySVJ9lqUAAAAAElFTkSuQmCC"/>
+                  <p>Hotel is maintain good</p>
+                  
+                  
+                </div>
+                
+                <div class="downicon">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAYhJREFUWEftl1FOwkAQhmdMfIcT6BHwBOycRDyBmNB3fXV5gBNYTzLlBnoDjwDPEH+zRoy020K6XViNfe7OfPlndnZ+psQ+ToyHfieQ6rjHfP7k1AQwF5kWsZQ9SKHFIisAGm4hAJqL2HEMqL1AqpOcma/LyY2xe8+2AW4MqpqNmOmzVOUPWPdFZss2SZvO1AKpTgwzq/8wXo2ZDrqGcfG8QKrZgJkcTM+vDt2I2PwoQF83ysHUKbAC1pcxyuVVqHyjqr2DZ5HpKIY6FSDVbMZMt03JALoSsS9HASqKDLES1cTNgfXdz/LvNPUJgNzk32mBkwMR0dIY298qmALQyhj7PV5ODpRUyRwM0WYcvalDHt7OS8ZMi+HQmrbj4+8DhS5vnSsE8IPI430yJQPCVpMICkFCTEAEoLBtoHOgkBlU2Ye6eO2TAgodij6F3ojoou2VLT+UbeLs9FCTDzsg+AogE7reVmyQs0BEMERnXgvkB3tfEm3yLpxIFDt8gJq1v/wD7VMvOYU+ADW0ySVJ9lqUAAAAAElFTkSuQmCC"/>
+                  <p>Hotel is maintain good</p>
+                  
+                </div>
+               
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div id="section-5">
+        <div class="five-container">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9I2xta0ahIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+      </div>
+
+      <div id="section-6">
+        <p>OUR SERVICES</p>
+        <h2>Hotel Facilities</h2>
+        <div class="sixth-container">
+          <div class="flex-1">
+            <div class="pick">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAABG9JREFUeF7tmN2LG1UYxp93sq0Ui1CleC9FQaiC9EJKk+1sJtvaCxXcpiKC/4CX7YV40b1SYb20iqJrpmUtrcWVSi2STJKd3bYWFQRBwY+iUETsUiqW1m525pUJxl3bTM6ZOWdm13ByFcj7+ctznhkOwXwGEiDDZzABA0igEAPIAFIzEaMgoyCjIDUCRkFq/IwHGQUZBakRMApS42c8yCjIKEiNgFGQGj/jQXkqqFXf/ThTMAXQZgJqKFgztt1eVPsP1zZbi4K6YKzwNTBGb1unw6AzxGGNRgpnbLu9vLbrJu+uBOgfxbwK0G5ha8IVCjFjAdOjFf8bYfw6CVAD1ChOMOhtAPcm3Ofr/8sRVAIUQfE/LW5d3khvAXgmIaRuOAGzAB+1nfmP0+TL5Hhe8TFiPEWg7Qz8CcY5GrFO2nb7mihfGVCvgeeN7ifwETC2ipr2/V3zEWw2dz2KkKpgqoKwrU/P70OETzjOwqVB82oD9K+aNtC7IDyZCtJKUqoj2GgUHyGmKhH2A3hQYoZLfy3d/fC+fWdvxcVqBdRr0qyXngPhDQBbJIYcHEL4iJiPxR3BuXppe0A8AdDzAB5I2o8Jh8pl//VcAenwpjsGJlxhxgcMno5+s2BNAKgC/FBSKP+JJ5wcK/sHcgfUa9hqFJ9l0Jta1KREon8yAZ/Yjh9rCZkcsdtH6T7p9HhTFoheHnPmXlkzBa1uvB7VxDSyrVxu/rQuAPW8qbPReofAT2cgh2QlGS+MVfyjuT3mk0zXapQOMHAEwH1J8rTEMi4SWy/a4+0vRfVy8aC4IXL2pt8YmBlhvDda8b8Tgen9LgTU8kqHmdkhLhyyK+3PZQvLxK26HtklE58i5haYT6NAtcXF+z+rVj8MktYYCMjzSgeJMbVSlNvEhZdUQSW6BUi6URTPuMgW18LwruOVSuOPNCWECroTzuo26UBlDOYyQMeoQNO23f5RBcrq3FgFefXSJBEOD24kBypDMDcAzIYgd2FhzpucRKgLjFBBUUCrXppiwkFx0/6gsgJDwDwAFwXrhG23r4vnSx8hNmlpSN3D3/Wo7jcK5G4a5Wf/Obo3YtowXS43f5FPU4sUAkqmJLVh+mRfZ9ApCsOaXZn3icDaOwgKSgHKGVIEocVEtU2blk7t3HnhZt5QpEy631DynpR8JQZ+sAhuJwjeHx8/92vyCtlkSCuo114zpOgd5QQT3HLZP5/NimpVEwPScNwCgOsEuDeXNs8Ouu5UW01PdipAKSF9C5DbCTq1PXvO/65n/OyrpAYkCekqgOPRi5zjzH2R/Tr6OygBioG0TMBZZnbv2XLj9I4dX3X0j51fRWVAK5CoAg7dpWDZ3bv3QqScofhoATQUJGKWMIB0vUkPs0oG7WYUZBSkpn2jIB0KajZKuV8zqP3vctljji8UiDAgamUACYAbQAZQLAFzxIxJxxPQZtJyz4ThjJI6YsO5utxWBpAOD5JjPZxRRkFGQWrKNgoyCjIKUiNgFKTGz3iQUZCagv4GeVyfWDNwZwQAAAAASUVORK5CYII="/>
+              <h4>Pick Up & Drop</h4>
+              <p>We'll pick up from airport while you comfy on your ride, mus nellentesque habitant.</p>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <div class="pick">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAA7JJREFUeF7tm09y0zAUxt9zDkA5AeUEtAeoazsuW2DJinIC2h2sWlawozeArFhSttSxU+cApCcgPQHlAPVjNE1mMoklS5asyDPKNvrzvZ++J1myjOB/QgLo+YgJeEANDvGAPCC9ScQ7yDvIO0iPgHeQHj8/B3kHeQfpEbDloOIqiiqkdwjVDgDuAcBOp8o3G78DoBlBMA8IR/HRZGKif+05qPgV7VFw/wUAIxOCzLVBE6wGp/HzyUynTS1ARRHt0H31ZwtukY15joNgP44nd7IV1stpAcqz8DcAsHRy+TdL0nK/rcDWgIrxwTERfm3bsc16iPQ2Hk6/temzNaA8C1lq7bbpdAt15klaPm3TbytARXbwkgB/cDr8iRRcmFpFZIMqimiX7qsLAHhRVweBXsXp9FK2vWW5VoDyLGR2fbPZGd4k6fVW56R8HE6A4LAGxChJy2NbgP7WrVxtR0lVtKi8wN13SVo+Vu1L2UECAf+StLT9cFgbb56FbFl/tLlkq6eZMiB+ekErC6uOqEx5kxrbAHI2vZbwTKaZEqA+pNcSkqk0UwJk0royqaJTxpRWVUDOp5fpNJMG1Kf0Mplm0oBMWVYnbVTrmtCsAqg36WUyzaQAFePwjAjOVUfQ5fKIcB4Py49NGoWAHk4LK7Yp7cuuvSne9f9nOAhi0YEaF9DitLDowYGYKpQNSKIDNS6g8VV4jghnur33ob7oQI0LSHBs0IeY1TQiXCfDsvalAx9QFpJaL70uzT0KUQaUpKXUyucqrpwz8Ly4PKDFSHpACxBbcdD4KvyESK8B8AkA3RLh9+FR+cFmmslqsA4oz8JrAAhrYJRJWtYdnhvnpqLBKqCHUYP3vIiJ4HPXTlLVYBVQnh3MH9KKi+g2SaedblNUNVgG1Pys1PVjAS/g1SFb1WAZkHfQRu6sjoZq/hufnQFAVYNVB7GAVVaQLgCparAOiAmUfQbpCpCKhq0A6jJw0217QA1EPaBtAzJteVfaU9/N8y8iuRKTOR1tThT7dElTlxQhnQ6HU3Z9b+MnPB3Ms8MZAD3TFeB2fbzBAUa8Vz/i92LsonhVXXLu/Lkdt5Q6MRzWhNT5ssyGUEqPY4VkNtLGAMl0ZpOPzKDKaPaAGkbNA/KA+AR8ijW4wwNyCJAzt+yXTCRWMSnNspM0+0qm9iuahSBnbtmvADKiWQrQ4jIV+8KHXRFZ/wZihIPgROezxy6ej0xplgLURQB9adMDMvEc1JfR7kKnd5B3kJ6vvIMa+P0Hw2pXZ3PSg1wAAAAASUVORK5CYII="/>              <h4>Parking Space</h4>
+<p>Fusce tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>          
+  </div>     
+      </div>
+
+           <div class="flex-1">
+            <div class="pick">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAw1JREFUeF7tmz1y00AUx/8rpScTLgA3cANUCOvDAx1U1BkoKIETQE6AKSn4qKlIB8T6QKkIBTkCFyDjA2A9RsYejC15LT1ZltBzGe/qvf3tb9/uahwF+awloITPegICSGOIABJAvCIiBolBYhCPgBjE4yc1SAwSg3gExCAeP6lBYpAYxCMgBvH4SQ0qa1Awsiirr+PFnYKaO1gB9EcPAdSGJRaG/f1kQi8U6B6AfV5ZTXtTRDDGBiiCaRzbdvSj7DMbYVAwsj4AuFt2EPp+FCkyj+xBFOnb/tuiKYAyN4Sig9G1V4Qh9owj247Gurbz7zsFaDboc2Ua9qaQuggo5TRWpnF1E0hdBZRC2sikSgEFJ9YDAPdJ4ZoCDgi4UIRvAN47g/hN3rqv8swVfu73YE56CameAg4BXMqLS8BL14ufrKtHlQAKw36PJskrANfXBDtTpvHItqPz5TZVAlp8dhj2r1CSvAPhVl5eigx73e7GBpTCSX4lvlI40O0MRLgw9gx3GdK2AM3z8U+s50rhWXZ+FDneqZ0LkKt9MLK+asxZDnHmePGNxT9uG1AaK/CtKM+kWcHOPEyyDJrWHIXXOnNWvic8XKxJdQCaLrdJki7vlZpEip667ukwaxxcQB+hcLsEoE/OIL4z71cHoDSWP7KGCnicke+x48XpNWflwwLkj6yf6W5VFFC6u7lefLluQKF/85BIvc2g8MVx437lgPJmfhNgi++V6jIoPQKQkXzPyi/vPVenDJoW64IvAlmAghOrVTVoF4Bas4uVrXcsg2Yz0opz0M4AteEkzTmUsg1Kgzf1Lpa1W9VapJcTaMJtXnfE2CkgXXLce1/Z5+98iXETLzqrnHhFY1VSgzgJlzmbcOJtHRAnuSb3reyq0eRBcnITQBp6AkgAcRYYIAbVZVDbf0C19W1eAM1ULEqaVwHq6110XI04SdeHp+ZXrnUOrKpYYpCGpAASQLzFJgbVZRBvnv6f3p36t4Iy0yaANNQEkAAqs7D+9hGDxCAxiEdADOLxkxokBolBPAKa3r8BR/AVZ4aOItoAAAAASUVORK5CYII="/>              <h4>  Room Service</h4>
+              <p>Room tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+            </div>           </div>
+
+           <div class="flex-1">
+            <div class="pick">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAtFJREFUeF7tmt11GjEQhe/sFhB3kBLiBsDGxs8mFSSuINABncTuAD+bn41pgHRgd0AD7ORogZMNZldaCR2Dc/eNw2oYfbozSPdIwKeWgJBPPQECsiiEgAgorIlQQVQQFRRGgAoK48ceRAVRQWEEqKAwfuxBVFAkBU3HbQWwVEiWQEdIk8dOJ1v6/NxsdnmGVX6bQ3oCvQRwtonzopDFMcevLLENoDKPpUDvOt35qAmk2bj9Q4FhCUrV8BeBDiLG98q/CaBiYgq5v+7+unOBNBlf/BTod5d3t+8cU3yTU2NALpBMSekqnwE4bwLHFVLs+OWcvQCtA2gmafp1ty+FJl+GlKQyiBW/Kv/dBQ0AVIRaiCaDzk2WmQ/Tp9YtREy/8VLOHrVFjw/V4dXN/LFK6bX7oNm41VMkQ0C/+JTK2zHyW1T6W6DHFP+q+7yXhXWjuC4ZzQ4A6UHSpL+/ZN4/vjegrQqm4/Y9gG+eSnq46j5X/psVi5DnIyguYsQvyt+SfzAglx+pmFwtnPIY2yRixj8IIJPgum+IUdOn+tXWVwH6TTd+k0mrL1o0+ijxq/I/GKACkjk65KueqvQAmKPDZjL6CshCREdI0lHQ0cQSv3M9N4vk9fybv54D8vmggLyyOtFB1n+xE53XwdImIAtK206adkcVQNodazI2Bb3hd0x2RGw7xQuQGWSDFHqif+/4ZVU0VtDfwbQ7jCdte6LbEbHtFNodjnaN906adoetiDbfe560t9Fpd9Rwpt2xHw7tDtodju3pQ7/G07zvaf5Dy6LB5GxHjVO3O4LztwEqs/a6HcHbHTVyjW1HxI5Pu8OhFzUpsZ1wtDtod9RZrkYux3T7wqEazHS8b4/Q7rBc4fEGtF052h0OGvaERLuDdscOAd7ucCi3/+UV2h20O8K0TgVRQVRQGAEqKIwfexAVRAWFEaCCwvixB1FBVFAYASoojN8fdY11dhkn3LAAAAAASUVORK5CYII="/>              <h4>Swimming Pool</h4>
+              <p>Swimming pool tincidunt nise ace park norttito sit space, mus nellentesque habitant.</p>
+            </div>           </div>
+
+           <div class="flex-1">
+            <div class="pick">
+<img src="data:image/png;base64,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"/>              <h4>Fibre Internet</h4>
+              <p>Wifi tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+            </div>           </div>
+
+           <div class="flex-1">
+            <div class="pick">
+<img src="data:image/png;base64,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"/>              <h4>
+                Breakfast</h4>
+              <p>Eat tincidunt nisa ace park norttito sit amet space, mus nellentesque habitant</p>
+            </div>           </div>
+
+
+        </div>
+
+
+      </div>
+      <div id="section-7">
+        <div class="eight-container">
+          <div class="pasi-container">
+            <div class="pasi-1">
+<img src="images/rest.png" alt="">     
+       </div>
+            <div class="pasi-2">
+              <p>
+                  DISCOVER</p>  
+                  <h3 >The Restaurant</h3> 
+                  <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>    
+                        <button type="button" class="btn-5">LEARN MORE</button>   
+            </div>
+            <div class="pasi-2">
+              <p>
+                EXPERIENCES</p>  
+                <h3 >Spa Center</h3> 
+<p>Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>                      <button type="button" class="btn-5">LEARN MORE</button>               </div>
+            <div class="pasi-1">
+              <img src="images/spa.png" alt="">                </div>
+
+
+            <div class="pasi-1">
+              <img src="images/fit.png.jpg" alt="">                </div>
+            <div class="pasi-2">
+              <p>
+                MODERN</p>  
+                <h3 >Fitness Center</h3> 
+<p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>                      <button type="button" class="btn-5">LEARN MORE</button>                 
+            </div>
+            <div class="pasi-2">
+              <p>
+                EXPERIENCES</p>  
+                <h3 >The Health Club & Pool</h3> 
+                <p>The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>    
+                      <button type="button" class="btn-5">LEARN MORE</button>               </div>
+            <div class="pasi-1">
+              <img src="images/pool.png.jpg" alt="">                </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="section-8">
+        <div class="small-head">
+          <p>HOTEL BLOG</p>
+          <h3>Our News</h3>
+  
+            </div>
+        <div class="nine-container">
+          
+          <div class="card-1">
+<div class="bg-1">
+  <h5>May <br>01</h5>
+
+</div>
+<div class="card-text">
+  <h6>DESIGN</h6>
+  <h4>Histroic Restaurant</h4>
+</div>
+          
+          </div>
+          <div class="card-1">
+<div class="bg-2">
+  <h5>May <br>03</h5>
+</div>
+<div class="card-text">
+  <h6>BATHROOM</h6>
+  <h4>Hotel Bath Room</h4>
+</div>
+          </div>
+          <div class="card-1">
+            <div class="bg-3">
+              <h5>May <br>05</h5>
+            </div>  
+            <div class="card-text">
+              <h6>SPA</h6>
+              <h4>Benfits With Spa</h4>
+            </div>        </div>
+
+        </div>
+      </div>
+
+
+      <div id="section-9">
+        <div class="ten-container">
+         
+            <div class="stars2">
+
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnlJREFUWEftl19u00AQxmeiIB7pa7ZIkBMQOwfAPQHhBIQTEIQj8UZ5Q8pWCiegnIDmBJQD1G5P0CJR55H0MWqUQRvb0Fi7O2s7KRXCL/nj2Z2fP898u4twxy68Yzzw7wFN47ePia6/KqUR7+21vA8XdVSvrVAShYcA8CKD+Cx82f9rQKk6i/ObAIjNdh2VaimUnAzHgPRqTRHCj6I7GlRVqTLQeTzYuU9Npc5OIflsjot22xvPqkBVBro8CfcR4Z02KcFr0ZXjWwVKolB10yN9UroQ/kH71oCm8bBPRJ9sCRHxZcsbqQ4sdVV6ZUkUngLAEybTqfClV4pGeVlxwDQOAyAkQArye7TEDiDlxdvRFLIprypsBQ9AOMMGpd/T38fqo+WPvq3Zxs0fSRSqoKdln6pm/LHw5V4+x5pCl1E4Q4AHNROUGk4AV7u+/G0da0AuxVoqm0Nwsfg1NcR3kEMeNkQp00DotTy5qiXtK8v/3LZSCoYQg4fe6E+RZ8mNbb9FqO9LxJ4ORjFZfWgLUGdzXAS2dY41RuVLS4KjDXQfC8MqlNdUEr/pAeEXtlLNAWfCl8pQ2YtVSM1gXdnZFGmA8KVTLqegJAqPAOCZY259GNJz4R2oeayXE9BGHNxxJ8kC/YiHnQZRzD0Zf99tj8QCbbL1XQ4ALFDhmGMSYpLdsNeZw9bWBci4VVVLACL182JV9kCEhxbPmghf9myv1wqUnSx+GiaYzHHRL7puNkZtXbVqce1vBdIZYlEV09Ma1WLa3wqkMUStKiYonVpE8H63K/dNY5jFdXVUTvcrSAMXY9MlypRendMQm4HtqM0WNe8vm434D8Tp+QvjfRE08nmeLgAAAABJRU5ErkJggg=="/>
+        <div class="contact-text-1">
+
+<h5>
+  Each of our guest rooms feature a private bath, wi-fi, cable television and include full breakfast.</h5>
+        </div>
+
+        <div class="call">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA4FJREFUWEftV0Fy00AQ7FmH4kh4Ac4LsKsi25yIo3DGeQHJCyAvwHkBzgtwXoBzJsLmFMtKVcwLCC/AHFM4GmplyV6tVlo54ZCi0MnalWbaPT2zLcIDu+iB4cG/DSjwWl2A34MxhcCMQwxuK3T2oj2+LlsJK0OB13zHDG7s+Se2oEtA+oOE0ZzosAywQkCTL60+Mb+R8Qnob7v+YRGoXEDLl7jruJPjohi5gFQwSYAyoC6GrerGHFUI7IC5BsJrFYCMURE3R/X2dGYCZgRkArMOKDVR8Lm1A8F9AM/KxMgA0sEw0WlUsrh0Zcungroa1jZvw8ddBt6u1unYccfdrNyUFSlgAB+SJQmmsTs+kPc6UFP5Ul0mhSzoRBXypdfsqaDmgrZ0oacYCrymbM+IWhVMAtAGyizqtJCD8+ZA0dXAcf19TWOr28BrcnLnuH4pfTHosOGOpUaQ32Wr8kSiD/l7kkdnKZX00mtOGXgeMSTCeqMdTPUaZwQfUtt5NR4lz8mEj27DGoikZqJY8lITazGOHNfvKYJXGWqMAHoZrWiJTDoylVX9A+ofJOBk2/WlRjHxWgcE/hg9yzhz9vyOEZCKXC1FJkiOxnQ2L88bHSb6FCeeOnt+Xf5OlY2xXJd7mqjjs8iQUO1AAr5tu35NB6Df63pRdZmn1xSgydCpUSiu4sAzx/WfJknkLJmHj3/miTEP3ELoi0udO3nrmU5Ktb4m7HTLmgebjTXbfuGk1kWbEiMwmwuqlznBbSDU/SxDi7NnmFcatXNAGDm7fju/XOWti7HLksXAW7W/zlIsVDmfnkTP53idda1LMSCNJX0m6WcegBnAvbkQp7KEd7UumbZXqdeCzjbEzZbqYWJQsoMWTCWXtK8E40go46dyDVqmNIzpRuWmrYKKjomQB+oRkcJ2B+tSbGHTcynXxkbdx9xR3eG61qVQQ6nSqeeO3DAwpQ3PyD+pB6a8t1mX0oBMwSIRh7SvnvJlZk3GjSrWZS1AESidqfhL5Leg47LD8a8CikAtNCW9T6qzZPeEJPqN3YuveUyZvHpijwsntY162VkVRlc1/co7MwIGYB6FonINmv+SJq8smMI5ZAO2+LwJu0tDZ3sh3reZOuuntC2PBEaCOwxI17f89jK9ZwNzL4ZMCRcaq3SYUCUOqwTajIfmDwA9fRSYYtybIRuD6+7/B2Rj7A8Hv0JDnpCoNwAAAABJRU5ErkJggg=="/>
+          <h4>Reservation <br> <span>9908064365</span> </h4>
+
+
+        </div>
+
+            </div>
+
+
+            <div class="ten2">
+              <h5 class="nin">Contact us</h5>
+              <div class="main-contact">
+
+                <div class="check">
+                  <h5>check-in</h5>
+                  <input type="date">
+                </div>
+
+                <div class="check0">
+                  <h5>check-out</h5>
+                  <input type="date">
+                </div>
+
+                <div class="Adults">
+                  <h5>Adults</h5>
+                  <select name="cars" id="cars">
+                    <option value="volvo">Adults-1</option>
+                    <option value="saab">Adults-2</option>
+                    <option value="opel">Adults-3</option>
+                    <option value="audi">Adults-4</option>
+                  </select>
+              </div>
+
+
+              <div class="Rooms">
+                <h5>Rooms</h5>
+                <select name="cars" id="cars">
+                  <option value="volvo">Rooms-1</option>
+                  <option value="saab">Rooms-2</option>
+                  <option value="opel">Rooms-3</option>
+                  <option value="audi">Rooms-4</option>
+                </select>
+            </div>
+
+            <button type="button" class="last-btn">CHECK AVAILABILITY</button>
+                
+            
+
+              </div>
+
+             
+
+            </div>
+
+
+        </div>
+
+
+      </div>
+
+      <footer>
+<div class="abut">
+<h4>About Hotel</h4>
+<h6>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</h6>
+</div>
+
+<div class="links">
+
+  <h4>Explore</h4>
+<div class="sub-link">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Rooms & Suits</a>
+  <a href="#">Restaurant</a>
+  <a href="#">contact</a>
+</div>
+
+</div>
+
+<div class="con">
+  <h4>contact</h4>
+  <h6>1616 Broadway NY, New York 10001
+    United States of America</h6>
+ <div class="lasti">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2RJREFUWEftV0Fu1DAUfe6ka8oJGEvNSKzonIBWTSV2tCegPQHtCZiegPYETE/AdIc0qRhOwLBCaiq5nIBh3YyMfsbx2I6TeAYWFSK72M738//vP78wPLKHPTI8+LcBiSwZAHgHYApgBslGmHeu+fNP96GVaM2QyJJTSCZ5b3zZFtQA5C6dII9OQoA1AhK3B0Mw+aaIzuSQb9+cNIFqAFR+NuBxet4UoxaQBaaMEALq+6suorwLYBfADoDXFgAmh+jMzzifzHzAvIC8YFYAZW4ksoSADQE80+MNB6sAqoCR7EqVbFG6wPJZoMTuFuadASR7a4yf8zilJrAT6JzmFMB7PSbZFe+Nj+m9AtRzSqfLiMiXJpHF3f6FBSqPuEt0K0MiS6g9F6k1wJQA20DVkNoissiSkcGrEY/TIzMpLiBZTvI4DeOXZCe8NyaOoKHLdHnEgvRCg3Cy5ADanwLshcpQn/fGJHDW4yH8Ho/Tic4ibbj5sAOJgY5Fk8bGTowzHqcXmp4OhyjwSzVmbeTlkaesdjzjgExe8u0b4ijx8RhMflBrr3mcHvoBmUJolMITxMuxSjbv9g8h2Uc1PuVx2i9i2WXT4zTncqi8iyobFleI7kD5jcc3JHqNj8sXk5ciS7x8tQHdHuyAya9qlxmP06eaG6QlefSzjox1yBTRi2lTd+rGq8Jot75FbKdlvcLWlrW2+WaldkjrkHGGPOqH3OBtIMx5X4bo7vlcVxqRGZ0DTHic7jWUK9i6eLtM8yVLlu3vZmnRIaRPT9R6r9dZ1bq0AbKzBNjiZ3VcEYqsxAXy6IpKuK51qbS9JWqmJtGGUc5ND6NkgGSizFT5OWXPLwkBfqreoFVLM0WU71mgijUPI+uKME+1hnVps7CmLtXaWNV9JP9Ld7iidWnkkFM6896hqUqmHPEs/JN5YdJ7m3UJBuQNtiDxkXnLh2iNx41q67ISIAXKzVRRQjxsnoeK418FpEARp0ij7M4iYHJjyOPxl1qRtLu21i20/ii6GxQ3eGc+0P9r9oIZmCSLOoHcuIfELzJ5vh+H0qu78VcGZKg5iSfpUGnoQmjU6qPWBmQBY5KMGLX98t/LB6/FYTYqddhx7VVi4acIXBdMdgG5pUTzB10trhT49vjjDK0DvOmb/4DaMvob69kKQ+f7kw8AAAAASUVORK5CYII="/>
+  <h4>9908064365</h4>
+
+ </div>
+ <p><a href="mailto:prashanthkalachimmani@gmail.com">hotelraj@gmail.com</a></p>
+
+
+ <div class="lastf">
+  <img   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAvpJREFUWEftVktOG0EQfW0P63CDuKWMpaxinyBGHkvZhZwAOAFwgsAJ4pwg5gRkGcmDMjlBzCoSg9TmBIE1gyuq+djdPT09bCKxcC+nq2pevXpV1QIv7IgXhgdbQG0V2TK0ZaiNgbb7Vg0pNdpFFhwDGAEYAFhC0AIkLmQYJ64f5D6POwcQtF/6JRC0xOPOuXz7Y+kD5QWkbiaHEPQFwK4ziKAZuk+nUib31b26mQzQWV2CRM/pQ+JE9udfm0A1AirBfGujGMACQbbHoHIwgn5uEqBrQDAjzO4rLda5DOMzV2wnIPXnQw9B9ttghsQFOqvveXASXIrXWsAcFLJAlT4PAPb1kqrb8T5IXGo+e66SuwHdTGYQdFA6P4DESPbnCz0jZdrwFZetKC2JoW3Pny3WExnGezZLNUAlO5xpdU5lGE+d4k0jZuyjdddon4PSfRzA64Bux1OQ4K7icyfD2C1ODl50IDO3KV8WSF8nqTRiPbHOmMkL2Z8f6gkZgMofVDpgO2+2Zcbc+u+1oM5SGOVOIxZ6kYSVgAmoaPOqsx4QZD29pe2yqTQ6AcBjwTyCPsk3V1xO57H8jI4zAaURt+LnMsovGcZMrzuo2YncVSzqImsegt2nYVMyRtkALyBdpI2zolYqEkforO6ttm70L6Xx15W4zZCuh+aAxkyhaxle8UrhDjL15BG4SiN6DqDKiG2dg8sh/LWdY2Q0ClxpwpZhvCbGZqgdkDl7ajpTpg4bO1Wl4wUg3rGBD9CmHUkcyf58ZrSr3YVZMLBnjmM23SMLhjW7Tcm8gHRRG3SXi5P3W3V8E3wz/Arr9QLOtWbuNYNl3xxiXwbILLFo9e3sHQn5T+u7jif6Wf4sEcSxqieNkVh9dWi1bRhBdwiygW9gVn66Thpi1YZvHZBrP62j0TWoc+ja5K4fFnrqJpV4LRvnK8L3HuKlVz1bme4EQTZ9DjM2uHJV8BtqANAS1OF4U1dirW/qptXxv75vAbUxu2Voy1AbA233L05D/wD9Xok0hCcsyAAAAABJRU5ErkJggg=="/>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAv1JREFUWEftV7tOG1EQPWPcQxWlg5t4LaUCviBGXktRmoQqojN1ipAvgHxBQEqVJtClC5EiJZJ3FfMFLEUUiXV0/Qm4N0w0+zDse9esBAXT7r0zZ8/MnJlLuGdG9wwPHgAVZaQ0Q/q8twbCIsCdIqfR7zQEY6LaA6fMvUJA+rzXR+NqF0wrZRxmniEeA9hTLfsoz08mIK07S5g2vwGoyEgh7CGa002lhhdpJ7MBueYQwHPvEtMRGlfHqmUfF4aLHfB+7HKhA6admT9gqAxrozQgL03EXwIw26o9OKwKJO28ds09ALt5flMZ0q4p+V4WZlR70J8XzHjU3QBoi5kfM+HHk5b9WbtdB6BVEI9Vy1Zx3wlAfjfxaXBwQxmWpG4uG7u9twz+5F/mn8qwX8bYX493XxKQa0oR/xYXyrByu1C7ZlgXYQeOwTRU7cGB3Nej7hswfQ3rUNjWf1+soDnVWT+cBmiW5yxAAYtSY2sZ1Dlgktpz9L/eFi7xqLHAf5afWpYH1DU5uPdBGZbEm1kOID5Thp0IGEuppOIMBD+tLBJBqzPvTImU3AIQTpRhJTRoVpTABMT9uBToUfc1mKQrFwE4yrDW4yzOyVASUFAzH70AxJtZuhSAElEVe68Ma/8mqDoBiTC+kjSlpTMaNGjvFOmoEdBMQw5Uy5YOyzQ96u6D6V1a2u4YUJLNGgGZQcrSi/UOUuYJ4f0pal9DgjoCLkC8ndH2IppLWcU/X8oyhl9SGCGbYDjvRLeuxbRmYcycZT6oq8OIKkf6jc/AjX7W2lqVoarDtQOwP1y54YBY1DkihJFirzxca1w/0kSq8voRDD9/QctZNfNEMVcwr5tiogxrKX42fWOMrrA74X4zL4jw3g31Tp1x3ojMCqJvLvl+F+0rw/peFVTwepHHguw9YQembhL5gPxnkCiz//Koz04wbfbVs19SFgkr91Aklr+TmrqNTbyHYk4H5jIUj+xpj1BOQYuXhcYkTDi1PaXLxq3rXGHK6gpU1s8DoCKm/gOLxtg0POTcyAAAAABJRU5ErkJggg=="/>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAmlJREFUWEftl0FuEzEUhv+XTtb0BsQSU4kV7QkY1InEjtyA5AQNJ6A9QdsbpCcg7JA6iByhWSEllQw3SNeZ9FVvMkOjxB7boaAu4u3Yz5//979nD+GZDXpmPNgBuTKyU+i/K6Qn7UM07k/A1AKQALgBMEIeXarX335VQFon+5g3W+rgWr7/GRsp0z/ft7C3SNTB9cB1mvXvepr2AZxb1zH1QCxQHwB0kUdHq5CybhOoCsrUC4HSt8cdMH0JOMQnFWcX6/NNQCMAb4uJnlCF/HmkAex7AREPwCRKHSHKu0qNZtU6E9CwlLSaM0SU91YXbaQqXB0JcQcmsYbDQ2YfzEDcV6++X5kU0NP0FMBnL3WW0o/Bje46jM1DUhk/LMEFbIj7xuVqMH17fAGmE38gnKk4k0NsDGNj1JP2AMQfPTYQuav8y0F8h9HQZoXED3sL6RvipaW5n368U3EmxeNWSE/TytRycr+qCQcOAgo0aDiNijPrHWru1FEuPeVfja8qzjq24GZTB5dxELvV0EZTV6H1pN0FsaTvZdB29ZPvEOWtuiZrzaWeplLGLwAI1OETQVn7TxXfBWRrkNvwOdWpTZl8DGiQbkDPi9r5hNXT9PH2d29rm1FbWauLnECFUks/JQB3AHoTxsVjRIukzsjBQCWUmFsu0IDuHQbj4yF5H4sip+Ub2V8cpis0531fZYxVVqZGlJBy37bUf8t72XZ5uk5kvjqa8z6YuiWYK0b5nccADUzvZM8AxbRaUz+aufidkVE+R4rNZ8W7mPhGnirrfw8hEFuZetsNQtd5lX1o0L+ZvwNyqbdTyKXQAzhf5CWCS4yMAAAAAElFTkSuQmCC"/>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAc5JREFUWEftl11OwkAQx/9L8Fm8AfuwJD7pDcRQE9/kCNxAb4CewHIET6C+mdBEuIFvJpakeAN8J6yZWpa2QHeXloaY7gtpOjP7m4/ODAwHdtiB8aAC0mWkitD/ilAQtBuYH50pr9iiCcmaOi+T79ko/szFcJylv7GGAt+5B3ALoGF3uaE0k1Msai5vDQdpjTWgwHdeANwYms4nJtkTbw17cSMJoMB32gDe891irX3JhafSmgaiVPWtTeZTeODCo3vDkwYi0ot89q21x1x4lJlCgOiLyetAJtAMwLGpj1x4LPi66oFJ10YvZX/GhXeyLULSFIbkCIh+//pV/W7X+lva2VRDOwEtnQg+r5uozylaVm1jb0AKLGwflEa26vIZoS8JCI8Azk1KYG9AUcoIpGsCspQpHCgqapp9VNjW869QoPCzry369luAiuE3F57aIPJ2aursqsvapCkmW2in3pEhoZYBNOm4kIxqocyTMVwnnS4key6TBsD29SMcA75T5sR/5cJLtIj1jXE1l+gTNh60llH9AeDSmOF8RANdHe3/smiLjJYV2YBkRt03dgdd+KGe5/UpP32bbnNAC2TpeW7xCkgXwipCVYR0EdC9/wUWlqQlg8NF3wAAAABJRU5ErkJggg=="/>
+</div>
+
+
+</div>
+
+
+      </footer>
+      <div class="lastf00">
+        <p>@Created By Prashanth chimmani</p>
+      </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

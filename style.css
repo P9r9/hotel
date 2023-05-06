@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@400;600&family=Rajdhani:wght@300;400;600;700&display=swap');    
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body p ,h1 ,h2 ,h3, h4, h5, h6 {
+    font-family: "Rajdhani, Pathway+Extreme ";
+}
+
+nav{
+    background-color: rgb(124, 123, 120);
+   
+   
+}
+.nav-link{
+    color: rgb(255, 255, 255) !important;
+}
+.navbar-brand{
+    color: goldenrod !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.main-container{
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-image:  url(images/side-2.jpg);
+}
+.stars{
+    text-align: center;
+  padding-top: 40px;
+
+
+   
+  
+}
+.stars img{
+    padding: 5px;
+}
+.stars p{
+    color: black;
+    font-weight: 600;
+    padding: 5px;
+
+}
+.stars h1{
+    font-weight: 700;
+    letter-spacing: 15px;
+    padding: 5px;
+   
+    color: #ffffff;
+}
+
+ button{
+    padding: 10px;
+    background-color: transparent;
+    font-weight: 600;
+    color: #ffffff;
+}
+button:hover{
+    background-color: aliceblue;
+    color: goldenrod;
+}
+.container{
+    display: flex;
+  margin-top: 7%;
+
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    
+  
+justify-content: space-around;
+}
+.flex{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid black;
+    display: flex;
+   
+}
+.flex h6{
+    padding-top: 15px;
+    padding-right: 15px;
+  padding-left: 10px;
+}
+.second-container{
+    display: flex;
+  
+    margin-top: 5%;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+    width: 50%;
+}
+.call{
+    display: flex;
+}
+.call img{
+    padding-right: 20px;
+}
+.call span{
+    color:rgb(221, 185, 95);
+    cursor: pointer;
+}
+.side-images img{
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    
+}
+.image-2{
+   margin-top: 40px;
+   padding: 40px;
+  
+}
+.side-images  :hover{
+
+ cursor: pointer;
+
+ transform: scale(1.2);
+    
+    
+}
+@media (max-width:400px){
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .second-container{
+
+        width: 100%;
+        display: flex;
+    flex-direction: column;
+    margin-top: 280px
+    }
+    .text{
+        width: 100%;
+    }
+    .side-images{
+        width: 100%;
+        display: flex;
+    }
+    .side-images img{
+        height: 200px;
+        width:180px
+
+    }
+
+}
+
+.grid-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid{
+    width:350px;
+    height:370px;
+ margin-left: 45px;
+
+  background-image:  url( images/side-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  transition: 0.5s;
+  transition-duration: 1s;
+  margin-bottom: 30px;
+
+}
+.grid h6{
+    border:  2px solid white;
+    color: #ffffff;
+    width: 60px;
+    padding: 5px;
+    float: right;
+    transform:  rotate(270deg);
+    margin-top: 32px;
+    margin-right: 10px;
+
+}
+.cost{
+    color: white;
+    margin-top: 222px;
+    margin-left: 20px;
+    width: 200px;
+}
+.side{
+    padding: 0px 10px;
+    margin-right: 21px;
+float: right;
+    margin-bottom: 5px;
+    color: #ffffff;
+    border: 2px solid white;
+
+}
+.grid-container :hover{
+
+    cursor: pointer;
+transform:  scale(1.1);
+ 
+       
+}
+.third-container{
+    background-color: antiquewhite;
+    height: auto;
+    margin-top: 20px;
+}
+.small{
+    margin-left: 60px;
+  margin-bottom: 10px;
+    
+}
+@media (max-width:400px){
+
+    .grid-container{
+       
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+      }
+
+      .grid{
+        padding-right: 20px;
+width: 80%;
+    
+   
+    
+    }
+
+}
+
+
+.fourth-conatiner{
+    width: 100%;
+    background-color: rgb(160, 156, 156);
+    height: 80vh;
+    margin-top: 40px;
+}
+
+.grid-container-1{
+    display: grid;
+    
+    grid-template-columns: auto auto auto;
+}
+.color{
+    color: #ffffff;
+}
+.grid-1 .rod{
+    color: goldenrod;
+}
+.grid-1{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+
+    height: 400px;
+}
+.imagediv{
+    width:100%;
+    height:700px;
+    transition: 0.5;
+    transition-duration: 2s;
+
+    
+   background-color: #ffffff;
+}.imagediv img{
+    height: 250px;
+    width: 100%;
+}
+.imagediv:hover{
+    transform: scale(1.1);
+}
+.grid-2{
+    width: 300px;
+    display: flex;
+    height: auto;
+    margin-top: 25px;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+
+    height: 400px;
+}
+.grid-3{
+    width: 300px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 25px;
+    justify-content: center;
+
+    height: 400px;
+}
+.imagediv h3{
+    display: flex;
+}
+.downicon{
+    display: flex;
+    padding-left: 20px;
+   
+}
+.downicon img{
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}.imagediv h4 ,h3{
+    padding-left: 20px;
+    
+   
+}
+.imagediv h4{
+    padding-top: 5px;
+}
+.five-container{
+    width: 90%;
+    height: 70vh;
+   
+  background-color: aliceblue;
+   margin-left: 60px;
+   margin-top: 40px;
+   margin-bottom: 30px;
+}
+.sixth-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #ffffff;
+}
+.flex-1{
+    padding: 20px;
+    border:  2px solid goldenrod;
+    margin: 20px;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+.pick img{
+   margin-bottom: 10px;
+}
+#section-6 p h2{
+    padding-left: 30px;
+    margin-top: 20px;
+}
+#section-6{
+    margin: 20px;
+}
+
+
+@media (max-width:400px){
+    .grid-container-1{
+
+      width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .five-container{
+        margin-top: 910px;
+        width: 100%;
+        margin-left: 2px;
+    }
+    .sixth-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+   
+
+}
+
+.flex-1:hover{
+    transform:scale(1.2)
+    
+}
+.eight-container{
+    width: 94%;
+    height: auto;
+    margin-left: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+
+}
+.pasi-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.pasi-1{
+    width: 100%;
+    height: 300px;
+    transition: 0.5s;
+    transition-duration: 1s;
+    
+}
+.pasi-1 img{
+    width: 100%;
+    height: 300px;
+    transition: 0.5s;
+    transition-duration: 1s;
+}
+.pasi-2{
+    width: 100%;
+    height: 300px;
+    background-color: antiquewhite;
+    padding: 30px;
+
+ 
+}
+.btn-2{
+    background-color: goldenrod;
+}
+.pasi-2 h3{
+    padding-left: 0px;
+}
+.pasi-1 img:hover{
+    transform:  scale(0.9)
+}
+.small-head{
+    margin-top: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.small-head p{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+#section-8{
+background-color: rgb(177, 174, 174);
+}
+.nine-container{
+    display: flex;
+    height: 80vh;
+ 
+}
+.card-1{
+height: 400px;
+width: 300px;
+margin-left: 90px;
+margin-top: 20px;
+
+}
+.bg-1{
+    background-image: url(images/histroic.png);
+    background-position: center;
+    background-size: cover;
+
+    height: 350px;
+    width: 300px;
+}
+.bg-2{
+    background-image: url(images/bathrrom.jpg);
+    background-position: center;
+    background-size: cover;
+
+    height: 350px;
+    width: 300px;
+}
+
+.bg-3{
+    background-image: url(images/spa.png);
+    background-position: center;
+    background-size: cover;
+
+    height: 350px;
+    width: 300px;
+}
+
+.card-1 h5{
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 5px;
+    width: 50px;
+    margin-left: 5px;
+
+}
+.card-text{
+    background-color: rgb(255, 255, 255);
+    color:black;
+    width: 275px;
+    height: 80px;
+padding-top: 10px;
+    padding-left: 20px;
+    margin-left: 13px;
+    margin-top: -30px;
+    transition: 0.1s;
+    transition-duration: 0.5s;
+}
+.card-text:hover{
+    transform: translateY(-30px);
+   
+}
+
+@media (max-width:400px){
+    .pasi-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: -25px;
+    }
+    .nine-container{
+        width: 100%;
+        display: flex;
+        height: auto;
+        margin-left: -40px;
+        flex-direction: column;
+    }
+    
+    
+    
+    .stars h1{
+        margin-left: 10px;
+    }
+    .flex{
+width: 100%;
+display: contents;
+    }
+    .btn-2{
+        
+        width: 100%;
+        margin-top: 20px;
+    }
+    .pasi-1{
+        margin: 5px;
+    }
+    .pasi-2{
+        margin: 5px;
+    }
+    
+
+
+.stars p{
+padding: -4px;
+}
+    
+}
+
+.ten-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+    height: 70vh;
+  
+    background-image: url(https://img.freepik.com/premium-photo/woman-black-long-dress-stands-with-glass-champagne-near-infinity-pool_120960-447.jpg?size=626&ext=jpg&uid=R81520808&ga=GA1.2.205817442.1683025593&semt=ais);
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+
+}
+
+.stars2{
+    margin-top: 30px;
+    width: 50%;
+    padding: 40px 30px;
+}
+.stars2 h5{
+    padding: 20px 0px;
+    
+    
+}
+
+.ten2{
+  
+    width: 50%;
+    height: 60vh;
+    
+    background-color: rgb(255, 255, 255);
+    margin: 30px;
+}
+.nin{
+
+padding-left: 30px;
+padding-top: 20px;
+}
+.main-contact{
+    display: flex;
+    flex-direction: column;
+    padding-left: 44px;
+    margin-right: -91px;
+   
+}
+.check{
+    display: flex;
+  border: 2px solid goldenrod;
+  width:68%;text-align: justify;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  
+}
+.check input{
+    padding: 5px;
+    margin-left: 29px;
+    width: 76%;
+}
+.check h5{
+    padding-top: 3px;
+}
+
+.check0{
+    display: flex;
+  border: 2px solid goldenrod;
+  width:68%;text-align: justify;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  
+}
+.check0 input{
+    padding: 5px;
+    margin-left: 19px;
+    width: 76%;
+}
+.check0 .Adults .Rooms ,h5{
+    padding-top: 3px;
+}
+.Adults{
+    display: flex;
+    border: 2px solid goldenrod;
+    width:68%;text-align: justify;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    
+
+}
+.Adults select{
+    padding: 5px;
+    margin-left: 43px;
+    width: 76%;
+}
+
+
+.Rooms{
+    display: flex;
+    border: 2px solid goldenrod;
+    width:68%;text-align: justify;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    
+
+}
+.Rooms select{
+    padding: 5px;
+    margin-left: 43px;
+    width: 76%;
+}
+.last-btn{
+    width: 68%;
+    background-color: goldenrod;
+}
+
+@media (max-width:400px){
+    .ten-container{
+      
+        width: 100%;
+        /* background-image: url(https://img.freepik.com/premium-photo/woman-black-long-dress-stands-with-glass-champagne-near-infinity-pool_120960-447.jpg?size=626&ext=jpg&uid=R81520808&ga=GA1.2.205817442.1683025593&semt=ais);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; */
+        display: flex;
+        background-color: antiquewhite;
+        background-image: none;
+        height: auto;
+        flex-direction: column;
+        
+    }
+    .stars2{
+        width: 100%;
+    }
+
+    .contact-text-1{
+        width: 70%;
+    }
+    .ten2{
+        width: 90%;
+        height: 70vh;
+        margin-left: 16px;
+        
+    }
+    .check{
+        display: flex;
+      border: 2px solid goldenrod;
+      width:100%;
+      text-align: justify;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      
+    }
+    .check input{
+        padding: 5px;
+        margin-left: 69px;
+        width: 50%;
+    }
+    
+
+    .check0{
+        display: flex;
+      border: 2px solid goldenrod;
+      width:100%;
+      text-align: justify;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      
+    }
+    .check0 input{
+        padding: 5px;
+      width: 50%;
+      margin-left: 59px;
+        
+    }
+    .Adults{
+        display: flex;
+        border: 2px solid goldenrod;
+        width:100%;text-align: justify;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        
+    
+    }
+
+    .Adults select{
+        padding: 5px;
+        margin-left: 85px;
+        width: 50%;
+    }
+    
+    
+    .Rooms{
+        display: flex;
+        border: 2px solid goldenrod;
+        width:100%;text-align: justify;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        
+    
+    }
+    .Rooms select{
+        padding: 5px;
+        margin-left: 79px;
+        width: 71%;
+    }
+    .last-btn{
+        width: 100%;
+    }
+}
+
+
+footer{
+    width: 100%;
+    height: 60vh;
+  padding: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-top:30px ;
+    background-color:gray;
+}
+
+.abut{
+    width: 30%;
+    margin: 20px;
+padding: 30px;
+color: #ffffff;
+    height: 50vh;
+  
+}
+.links{
+    width: 30%;
+    color: white;
+    height: 50vh;
+   
+    padding: 30px;
+    margin: 20px;
+  
+}
+.con{
+    width: 30%;
+    margin: 20px;
+    height: 50vh;
+    padding: 30px;
+    margin: 20px;
+    color: #ffffff;
+ 
+}
+.sub-link{
+    display: flex;
+
+    
+    flex-direction: column;
+}
+.sub-link a{
+    text-decoration: dotted;
+    color: #ffffff;
+    padding: 5px;
+   
+}
+.sub-link a:hover{
+    
+    color:goldenrod;
+    transform: translateX(10px);
+}
+.lasti{
+    display: flex;
+}
+.lasti:hover{
+    transform: scale(1.1);
+}
+.lasti h4{
+    padding-top: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.con p a{
+    text-decoration: underline;
+    color: goldenrod;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.lastf00{
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+}
+
+@media (max-width:400px){
+    footer{
+        width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    }
+    .abut{
+        width: 100%;
+       height: auto;
+        
+      
+    }
+    .links{
+        width: 100%;
+        margin-top: -48px;
+     
+      
+    }
+.main-contact {
+    display: flex;
+    flex-direction: column;
+    padding-left: 44px;
+    margin-right: 14px;
+}
+.con{
+    width: 100%;
+}
+}
